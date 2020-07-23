@@ -16,7 +16,7 @@ export class SignIn extends Component {
 	}
 
 	handleSubmit = async event => {
-		event.preventDefault();
+	 	event.preventDefault();
 		const { email, password } = this.state;
 		try {
 			await auth.signInWithEmailAndPassword(email, password);
@@ -55,7 +55,7 @@ export class SignIn extends Component {
 					</FormInput>
 					<div className="buttons">
 						<CustomButton type="submit">Sign In</CustomButton>
-						<CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign In With Google</CustomButton>
+						<CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>Sign In With Google</CustomButton>
 					</div>
 				</form>
 			</div>
